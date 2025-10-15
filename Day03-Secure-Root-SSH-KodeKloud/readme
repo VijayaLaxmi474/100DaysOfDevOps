@@ -1,0 +1,15 @@
+# Day 03 – Secure Root SSH Access (KodeKloud Challenge)
+
+## Overview
+This repository contains my work for **Day 3 of KodeKloud Linux/DevOps Challenge**, where the task was to **disable direct root SSH login** on all application servers for **Project Nautilus** deployed in the Stratos Datacenter.
+
+## Objective
+- Enhance server security by preventing direct root SSH login.
+- Maintain normal user access for administrative tasks.
+- Apply best practices for SSH configuration and service management.
+
+## Steps Performed
+1. Connected to app servers (`stapp01`, `stapp02`, `stapp03`) via jump host.
+2. Backed up the SSH configuration:
+   ```bash
+   sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bak
